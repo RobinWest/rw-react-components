@@ -1,0 +1,34 @@
+.button {
+  padding: 0.25rem 0.6rem;
+
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+
+  background-color: #fff;
+
+  /**
+   * Types
+   */
+  &--primary {
+    background-color: blue;
+  }
+  &--secondary {
+    background-color: green;
+  }
+  &--tertiary {
+    background-color: red;
+  }
+
+  /**
+   * Variants
+   */
+  &--slim {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+  }
+  &--large {
+    padding: 0.4rem 0.8rem;
+  }
+  &--wide {
+  }
+}
