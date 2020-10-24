@@ -10,7 +10,7 @@ export default {
       control: {
         type: 'radio',
         options: {
-          'Default': '',
+          'Default (Secondary)': '',
           'Primary': 'primary',
           'Secondary': 'secondary',
           'Tertiary': 'tertiary',
@@ -24,6 +24,7 @@ export default {
           'Large': 'large',
           'Slim': 'slim',
           'Wide': 'wide',
+          'Full width': 'full-width',
         },
       },
     },
@@ -33,6 +34,7 @@ export default {
 const Template = (args) => <Button {...args} >{args.label}</Button>;
 
 export const Default = Template.bind({});
+Default.storyName = 'Default (secondary)';
 Default.args = {
   label: 'Button',
   type: '',

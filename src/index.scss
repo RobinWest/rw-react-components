@@ -1,7 +1,16 @@
+@use 'scss/partials/variables/index' as var;
+
 @import-normalize;
 
-body {
+html, body {
+  font-size: var.$font-size--base;
+  color: var.$color-coal;
+
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,4 +21,5 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  background-color: rgba(255,255,255,0.2);
 }

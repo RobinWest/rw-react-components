@@ -1,0 +1,12 @@
+@use '../partials/variables/index' as var;
+
+@function color-level($color, $level: 0) {
+  $color-base: if($level < 0, black, white);
+
+  @return mix($color-base, $color, abs($level) * 10%);
+}
+
+@function pxToRem($size) {
+  $remSize: ($size / var.$font-size--base) * 1rem;
+  @return $remSize;
+}

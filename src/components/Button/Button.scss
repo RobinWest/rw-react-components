@@ -1,34 +1,79 @@
+@use '../../scss/partials/variables/index' as *;
+@use '../../scss/modules/helpers' as *;
+
+$button-padding--vertical: 8px;
+$button-padding--horizontal: 16px;
+
 .button {
-  padding: 0.25rem 0.6rem;
+  padding: pxToRem($button-padding--vertical) pxToRem($button-padding--horizontal);
 
-  border: 1px solid #ccc;
-  border-radius: 0.2rem;
+  border: pxToRem(2px) solid #ccc;
+  border-radius: pxToRem(3px);
 
-  background-color: #fff;
+  background-color: $color-white;
+
+  cursor: pointer;
+
+  transition: background-color 260ms ease, border-color 260ms ease;
+
+  &:hover {
+    background-color: $color-salt;
+    border-color: $color-slate;
+  }
+
+  &:focus {
+    border-color: $color-marine;
+    outline: none;
+  }
 
   /**
    * Types
    */
   &--primary {
-    background-color: blue;
+    color: $color-white;
+
+    background-color: $color-marine;
+    border-color: $color-marine;
+
+    &:hover {
+      background-color: color-level($color-marine, -2);
+      border-color: color-level($color-marine, -3);
+    }
+
+    &:focus {
+      border-color: $color-tangerine;
+    }
   }
   &--secondary {
-    background-color: green;
   }
   &--tertiary {
-    background-color: red;
+    background-color: $color-salt;
+    border-color: $color-salt;
+
+    &:hover {
+      background-color: color-level($color-salt, -1);
+      border-color: color-level($color-salt, -1);
+    }
+
+    &:focus {
+      border-color: color-level($color-salt, -2);
+    }
   }
 
   /**
    * Variants
    */
   &--slim {
-    padding-top: 0.15rem;
-    padding-bottom: 0.15rem;
+    padding: pxToRem($button-padding--vertical * 0.6) pxToRem($button-padding--horizontal);
   }
   &--large {
-    padding: 0.4rem 0.8rem;
+    padding: pxToRem($button-padding--vertical * 1.4) pxToRem($button-padding--horizontal * 1.4);
   }
   &--wide {
+    padding-right: pxToRem($button-padding--horizontal * 2.6);
+    padding-left: pxToRem($button-padding--horizontal * 2.6);
+  }
+  &--full-width {
+    width: 100%;
   }
 }
