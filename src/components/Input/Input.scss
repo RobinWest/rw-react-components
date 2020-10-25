@@ -1,0 +1,33 @@
+@use '../../scss/partials/variables/index' as *;
+@use '../../scss/modules/helpers' as *;
+
+.input {
+  height: pxToRem(38px);
+
+  padding: 0 pxToRem(8px);
+
+  border: pxToRem(2px) solid $color-stone;
+  border-radius: pxToRem(3px);
+
+  transition: border-color 260ms ease;
+
+  &:focus {
+    border-color: $color-marine;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-salt;
+    cursor: not-allowed;
+  }
+
+  &--error {
+    border-color: $color-crimson;
+
+    &:focus {
+      border-color: color-level($color-crimson, 4);
+    }
+  }
+
+  &--affirmed {}
+}
