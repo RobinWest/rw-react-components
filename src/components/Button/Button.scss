@@ -5,9 +5,10 @@ $button-padding--vertical: 8px;
 $button-padding--horizontal: 16px;
 
 .button {
+  min-width: pxToRem(120px);
   padding: pxToRem($button-padding--vertical) pxToRem($button-padding--horizontal);
 
-  border: pxToRem(2px) solid #ccc;
+  border: pxToRem(2px) solid $color-stone;
   border-radius: pxToRem(3px);
 
   background-color: $color-white;

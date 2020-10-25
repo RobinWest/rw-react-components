@@ -31,7 +31,7 @@ export default {
   },
 };
 
-const Template = (args) => <Button {...args} >{args.label}</Button>;
+const Template = (args) => <Button type={args.type} variant={args.variant} >{args.label}</Button>;
 
 export const Default = Template.bind({});
 Default.storyName = 'Default (secondary)';
